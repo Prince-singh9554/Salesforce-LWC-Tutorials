@@ -228,6 +228,3 @@ Modern Security Model
       ↓
 Better JavaScript Compatibility
 ```
-
-> **Locker Security = Older security architecture**
-> **LWS = Newer security architecture for modern Salesforce development**
