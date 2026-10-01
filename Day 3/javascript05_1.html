@@ -1,0 +1,39 @@
+<!-- In this code snippet, we have an HTML page that includes a simple email validator. The page contains an input field for the user to enter their email address and a button that triggers the validation function when clicked.
+The JavaScript function `buttonValidator()` uses a regular expression to check if the entered email address is in a valid format.
+If the email is valid, it logs "Valid Email" to the console and shows an alert saying "Your email is correct." 
+If the email is invalid, it logs "Invalid Email" and shows an alert saying "Your email is incorrect." 
+The entered email value is also logged to the console for reference. -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Email Validator</title>
+</head>
+
+<body>
+    <h2>Email Validator</h2>
+    <input  type="text"  id="emailAddress"  name="email" placeholder="Enter your email">
+    <button onclick="buttonValidator()">
+        Click me!
+    </button>
+
+
+    <!-- JavaScript -->
+    <script>
+        function buttonValidator() {
+            let emailPattern = /^[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,}$/;
+            let emailValue = document.getElementById("emailAddress").value;
+            if (emailPattern.test(emailValue)) {
+                console.log("Valid Email");
+                alert("Your email is correct");
+            } else {
+                console.log("Invalid Email");
+                alert("Your email is incorrect");
+            }
+            console.log(emailValue);
+        }
+    </script>
+</body>
+</html>

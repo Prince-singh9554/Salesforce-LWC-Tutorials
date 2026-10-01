@@ -1,0 +1,30 @@
+<!-- Use of innerHTML property in JavaScript allows you to change the content of an HTML element dynamically.
+ It can be used to update the text, HTML structure, or even add new elements within a specified element. -->
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Change Paragraph Text</title>
+</head>
+
+<body>
+
+    <p id="message">This is the original text.</p>
+
+    <button onclick="changeText()">
+        Click Me
+    </button>
+
+    <script>
+
+        function changeText() {
+
+            document.getElementById("message").innerHTML =
+                "The paragraph text has been changed!";
+
+        }
+
+    </script>
+
+</body>
+</html>
