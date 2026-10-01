@@ -6,39 +6,40 @@
 
     JavaScript mein events ko different categories mein divide kiya ja sakta hai.
 
-    | #  | Event Type                  | Events                                                                                                                       | Description                                                       |
-    | -- | --------------------------- | ---------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------- |
-    | 1  | **Mouse Events**            | `click`, `dblclick`, `mousedown`, `mouseup`, `mousemove`, `mouseover`, `mouseout`, `mouseenter`, `mouseleave`, `contextmenu` | Mouse ke actions ko handle karne ke liye                          |
-    | 2  | **Keyboard Events**         | `keydown`, `keyup`, `keypress`                                                                                               | Keyboard ke actions ko handle karne ke liye                       |
-    | 3  | **Form Events**             | `submit`, `change`, `input`, `focus`, `blur`, `reset`, `invalid`                                                             | Form aur input fields ke actions ko handle karne ke liye          |
-    | 4  | **Clipboard Events**        | `copy`, `cut`, `paste`                                                                                                       | Copy, cut aur paste actions ko handle karne ke liye               |
-    | 5  | **Drag & Drop Events**      | `drag`, `dragstart`, `dragend`, `dragenter`, `dragleave`, `dragover`, `drop`                                                 | Elements ko drag aur drop karne ke liye                           |
-    | 6  | **Touch Events**            | `touchstart`, `touchmove`, `touchend`, `touchcancel`                                                                         | Touch-screen interactions ko handle karne ke liye                 |
-    | 7  | **Pointer Events**          | `pointerdown`, `pointerup`, `pointermove`, `pointerover`, `pointerout`, `pointerenter`, `pointerleave`                       | Mouse, pen aur touch pointer interactions ko handle karne ke liye |
-    | 8  | **Focus Events**            | `focus`, `blur`, `focusin`, `focusout`                                                                                       | Element ke focus mein aane ya focus lose karne par                |
-    | 9  | **Window / Browser Events** | `load`, `beforeunload`, `unload`, `resize`, `scroll`, `online`, `offline`                                                    | Browser/window ke state ya actions ko handle karne ke liye        |
-    | 10 | **Media Events**            | `play`, `pause`, `ended`, `volumechange`, `timeupdate`, `loadeddata`, `canplay`                                              | Audio aur video elements ke liye                                  |
-    | 11 | **Animation Events**        | `animationstart`, `animationiteration`, `animationend`, `animationcancel`                                                    | CSS animations ko handle karne ke liye                            |
-    | 12 | **Transition Events**       | `transitionrun`, `transitionstart`, `transitionend`, `transitioncancel`                                                      | CSS transitions ko handle karne ke liye                           |
+# JavaScript Events
 
-    ## Most Commonly Used Events
+| # | Event Type | Events | Description |
+|---|---|---|---|
+| 1 | **Mouse Events** | `click`, `dblclick`, `mousedown`, `mouseup`, `mousemove`, `mouseover`, `mouseout`, `mouseenter`, `mouseleave`, `contextmenu` | Used to handle mouse actions |
+| 2 | **Keyboard Events** | `keydown`, `keyup`, `keypress` | Used to handle keyboard actions |
+| 3 | **Form Events** | `submit`, `change`, `input`, `focus`, `blur`, `reset`, `invalid` | Used to handle form and input field actions |
+| 4 | **Clipboard Events** | `copy`, `cut`, `paste` | Used to handle copy, cut, and paste actions |
+| 5 | **Drag & Drop Events** | `drag`, `dragstart`, `dragend`, `dragenter`, `dragleave`, `dragover`, `drop` | Used to handle drag and drop operations |
+| 6 | **Touch Events** | `touchstart`, `touchmove`, `touchend`, `touchcancel` | Used to handle touch-screen interactions |
+| 7 | **Pointer Events** | `pointerdown`, `pointerup`, `pointermove`, `pointerover`, `pointerout`, `pointerenter`, `pointerleave` | Used to handle mouse, pen, and touch pointer interactions |
+| 8 | **Focus Events** | `focus`, `blur`, `focusin`, `focusout` | Triggered when an element gains or loses focus |
+| 9 | **Window / Browser Events** | `load`, `beforeunload`, `unload`, `resize`, `scroll`, `online`, `offline` | Used to handle browser or window state and actions |
+| 10 | **Media Events** | `play`, `pause`, `ended`, `volumechange`, `timeupdate`, `loadeddata`, `canplay` | Used with audio and video elements |
+| 11 | **Animation Events** | `animationstart`, `animationiteration`, `animationend`, `animationcancel` | Used to handle CSS animations |
+| 12 | **Transition Events** | `transitionrun`, `transitionstart`, `transitionend`, `transitioncancel` | Used to handle CSS transitions |
 
-    | Event       | Used For                                     |
-    | ----------- | -------------------------------------------- |
-    | `click`     | User kisi element par click karta hai        |
-    | `dblclick`  | User kisi element par double-click karta hai |
-    | `mouseover` | Mouse element ke upar aata hai               |
-    | `mouseout`  | Mouse element se bahar jata hai              |
-    | `keydown`   | Keyboard key press hoti hai                  |
-    | `keyup`     | Keyboard key release hoti hai                |
-    | `input`     | Input field ki value change hoti hai         |
-    | `change`    | Input/select ki value change hone ke baad    |
-    | `submit`    | Form submit hota hai                         |
-    | `focus`     | Element focus mein aata hai                  |
-    | `blur`      | Element focus lose karta hai                 |
-    | `load`      | Page/resource load hota hai                  |
-    | `scroll`    | Page ya element scroll hota hai              |
+## Most Commonly Used Events
 
+| Event | Used For |
+|---|---|
+| `click` | When the user clicks an element |
+| `dblclick` | When the user double-clicks an element |
+| `mouseover` | When the mouse moves over an element |
+| `mouseout` | When the mouse moves out of an element |
+| `keydown` | When a keyboard key is pressed |
+| `keyup` | When a keyboard key is released |
+| `input` | When the value of an input field changes |
+| `change` | When the value of an input or select element changes |
+| `submit` | When a form is submitted |
+| `focus` | When an element receives focus |
+| `blur` | When an element loses focus |
+| `load` | When a page or resource finishes loading |
+| `scroll` | When the page or an element is scrolled |
 
 ### **Simple Event Handling Example**
 ```javascript
