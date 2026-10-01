@@ -80,7 +80,7 @@ const person = {
 ```
 
 ### **Use of keys(), values() and entries()**
-These function return an array
+These function return an Object ---
 ```javascript
 let details = {
   name: "Prince",
