@@ -139,3 +139,165 @@ myImage.addEventListener("mouseleave", function() {
     this.style.border = "2px solid black";
 });
 ```
+---
+---
+# **Code for understanding the working of all Events**
+
+### 1) **Mouse Events**
+```javascript
+// HTML
+<div id="box">
+  Move or Click Your Mouse Here
+</div>
+
+//CSS
+#box {
+    width: 300px;
+    height: 150px;
+    border: 2px solid black;
+    margin: 50px;
+    padding: 20px;
+    text-align: center;
+}
+
+// JavaScript
+let box = document.getElementById("box");
+
+box.addEventListener("click", function() {      // 1. click :- when user click on the box
+    console.log("click");
+});
+
+box.addEventListener("dblclick", function() {       // 2. dblclick :- when user double click on the box
+    console.log("dblclick");
+});
+
+box.addEventListener("mousedown", function() {      // 3. mousedown :- when user press the mouse button down on the box
+    console.log("mousedown");
+});
+
+box.addEventListener("mouseup", function() {        // 4. mouseup :- when user release the mouse button on the box
+    console.log("mouseup");
+});
+
+box.addEventListener("mousemove", function() {      // 5. mousemove :- when user move the mouse over the box
+    console.log("mousemove");
+});
+
+box.addEventListener("mouseover", function() {      // 6. mouseover :- when user move the mouse over the box
+    console.log("mouseover");
+});
+
+box.addEventListener("mouseout", function() {       // 7. mouseout :- when user move the mouse out of the box
+    console.log("mouseout");
+});
+
+box.addEventListener("mouseenter", function() {         // 8. mouseenter :- when user move the mouse over the box
+    console.log("mouseenter");
+});
+
+// 9. mouseleave
+box.addEventListener("mouseleave", function() {         // 9. mouseleave :- when user move the mouse out of the box
+    console.log("mouseleave");
+});
+
+box.addEventListener("contextmenu", function(event) {       // 10. contextmenu :- when user right click on the box
+    event.preventDefault();
+    console.log("contextmenu");
+});
+```
+
+# 2) **Keyboard Events**
+```javascript
+// HTML
+<input type="text" id="inputBox" placeholder="Type something">
+
+
+// CSS
+#inputBox {
+    width: 300px;
+    height: 30px;
+    margin: 50px;
+    padding: 10px;
+}
+
+
+// JavaScript
+let inputBox = document.getElementById("inputBox");
+
+inputBox.addEventListener("keydown", function() {       // 1. keydown :- when user press a key down
+    console.log("keydown");
+});
+
+inputBox.addEventListener("keyup", function() {        // 2. keyup :- when user release a key
+    console.log("keyup");
+});
+
+inputBox.addEventListener("keypress", function() {      // 3. keypress :- when user press a key
+    console.log("keypress");
+});
+```
+
+
+# 3) **Form Events**
+```javascript
+// HTML
+<form id="myForm">
+
+    <input
+        type="text"
+        id="nameInput"
+        placeholder="Enter your name"
+        required
+    >
+
+    <button type="submit">Submit</button>
+    <button type="reset">Reset</button>
+
+</form>
+
+
+/* CSS */
+#myForm {
+    width: 300px;
+    margin: 50px;
+}
+
+#nameInput {
+    width: 250px;
+    padding: 10px;
+}
+
+
+// JavaScript
+let form = document.getElementById("myForm");
+let nameInput = document.getElementById("nameInput");
+
+form.addEventListener("submit", function(event) {       // 1. submit :- when user submit the form
+    event.preventDefault();
+    console.log("submit");
+});
+
+nameInput.addEventListener("change", function() {       // 2. change :- when user changes the value and then leaves the input
+    console.log("change");
+});
+
+nameInput.addEventListener("input", function() {        // 3. input :- when user types or changes the input value
+    console.log("input");
+});
+
+nameInput.addEventListener("focus", function() {        // 4. focus :- when user clicks inside the input
+    console.log("focus");
+});
+
+nameInput.addEventListener("blur", function() {         // 5. blur :- when user leaves the input
+    console.log("blur");
+});
+
+form.addEventListener("reset", function() {             // 6. reset :- when user clicks the reset button
+    console.log("reset");
+});
+
+nameInput.addEventListener("invalid", function() {      // 7. invalid :- when input value does not satisfy validation
+    console.log("invalid");
+});
+```
