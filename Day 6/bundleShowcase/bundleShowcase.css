@@ -1,0 +1,20 @@
+.tryit {
+    background: #f4f4f4;
+    padding: 16px;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(65, 1, 1, 0.1);
+    text-align: left;
+}
+
+.mainHeader {
+    color: black;
+    font-size: 1.5rem;
+    font-weight: bold;
+    text-align: center;
+}
+
+.buttonContainer {
+    display: flex;
+    justify-content: flex-end;
+    padding-right: 16px;
+}
