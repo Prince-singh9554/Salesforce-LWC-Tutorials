@@ -1,0 +1,20 @@
+<template>
+    <lightning-card title="Zodioc Sign Message">
+        <lightning-input class="slds-m-around_medium" type="text" value={username} label="Enter your name" onchange={handleName}></lightning-input>
+        <lightning-input class="slds-m-around_medium" type="date" value={dob} label="Enter your DOB" onchange={handleDOB}></lightning-input>
+        <div class="slds-grid slds-align_absolute-center">
+            <lightning-button variant="destructive" class="slds-m-around_medium" label="Reset" onclick={handleClickReset}></lightning-button>
+            <lightning-button variant="success" class="slds-m-around_medium" label="Get Info" onclick={handleClick}></lightning-button>
+        </div>
+    </lightning-card>
+
+    <template lwc:if={displayDetail}>
+        <lightning-card title="Your Zodioc Detals :)" icon-name="standard:account">
+            <p class="slds-m-left_medium">Your Sign : {userdetails.sign}<br></p>
+            <p class="slds-m-left_medium">Your Emoji : {userdetails.emoji}<br></p>
+            <p class="slds-m-left_medium">Your Trait : {userdetails.trait}<br></p>
+
+            
+        </lightning-card>
+    </template>
+</template>

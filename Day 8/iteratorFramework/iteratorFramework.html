@@ -1,0 +1,40 @@
+<template>
+    <lightning-card title="Iterator" icon-name="utility:home"></lightning-card>
+    <lightning-card title="Use of for:each loop">
+        <template for:each={itemList} for:item="eachItem">
+            <div key={itemId} class="slds-m-left_small slds-m-bottom_small">
+                Your item name is {eachItem.itemName} and the total amount is to by this item is {eachItem.itemprice} 
+            </div>
+        </template>
+    </lightning-card>
+
+    <br>
+
+    <lightning-card title="Use of iterator loop">
+        <template iterator:item={itemList}>
+            <div key={item.value.itemId} class="slds-m-left_small slds-m-bottom_small">
+                Your item name is {item.value.itemName} and the total amount is to by this item is {item.value.itemprice} 
+            </div>
+        </template>
+
+        <lightning-card title="first and last">
+            <div class="slds-p-horizontal_small">
+                <template iterator:firstlast={itemList}>
+                    <div key={firstlast.value.itemId}>
+                        <template lwc:if={firstlast.first}>
+                            <p>Your first item is {firstlast.value.itemName}</p>
+                        </template>
+
+                        <div>
+                            Your item name is {firstlast.value.itemName} and the total amount is to by this item is {firstlast.value.itemprice}                             
+                        </div>
+
+                        <template lwc:if={firstlast.last}>
+                            <p>Your last item is {firstlast.value.itemName}</p>
+                        </template>
+                    </div>
+                </template>
+            </div>
+        </lightning-card>
+    </lightning-card>
+</template>
