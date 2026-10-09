@@ -1,0 +1,36 @@
+<template>
+    <lightning-card title="Data Binding" icon-name="utility:home"></lightning-card>
+    <div class="slds-m-around_medium">
+        <lightning-input label="Enter your name" name="name" value={name} onchange={handleChange} placeholder="Your Name"></lightning-input>
+        <lightning-input label="Enter your age" name="age" value={age} onchange={handleChange} placeholder="Your Age"></lightning-input>
+        <lightning-input label="Enter your email" name="email" value={email} onchange={handleChange} placeholder="Your Email"></lightning-input>
+        <lightning-input label="Enter your mobile no." name="mobileNo" value={mobileNo} onchange={handleChange} placeholder="Your Mobile No."></lightning-input>
+
+        <p>
+            Name: {name} <br>
+            Age: {age} <br>
+            Email: {email} <br>
+            Mobile No.:{mobileNo}
+        </p>
+    </div>
+
+<!-- Example demonstrating getters and setters -->
+
+    <lightning-card title="Getter & Setter" icon-name="utility:home"></lightning-card>
+    <h1 class="topicHeader">Getter </h1>
+    <div class="slds-m-around_small">
+        <lightning-input label="Enter your marks" name="marks" value={marks} onchange={handleChange} placeholder="Your Marks"></lightning-input>
+        <p>
+            Result Status : {passOrFail} <br>
+        </p>
+    </div>
+
+    <h1 class="topicHeader">Setter </h1>
+    <div class="slds-m-around_small">
+        <lightning-input label="Enter your marks" name="setterMarks" value={setterMarks} onchange={handleChange} placeholder="Your Marks"></lightning-input>
+        <p>
+            Result Status : {setterResult} <br>
+        </p>
+
+    </div>
+</template>

@@ -1,0 +1,69 @@
+<template>
+    <h1 class="slds-text-heading_large">Use of if-else</h1>
+    <div class="slds-card slds-p-around_medium">
+        <lightning-button variant="brand" label="Brand" name="option1" title="Option 1" onclick={handleClick} class="slds-m-left_x-small"></lightning-button>
+        <lightning-button variant="brand" label="Brand" name="option2" title="Option 2" onclick={handleClick} class="slds-m-left_x-small"></lightning-button>
+        <lightning-button variant="brand" label="Brand" name="option3" title="Option 3" onclick={handleClick} class="slds-m-left_x-small"></lightning-button>
+        <template lwc:if={displaySettings}>
+            <template lwc:if={displayFirst}>
+                <div class="slds-m-top_medium slds-m-bottom_x-large">
+                    <p class="slds-m-bottom_medium">
+                        Click one of the example buttons below to activate the `onclick` handler and toggle the state of each
+                        button.
+                    </p>
+
+                    <!-- Simple -->
+                    <div class="slds-p-around_medium lgc-bg">
+                        <lightning-button-icon-stateful icon-name="utility:like" selected={likeState}
+                            onclick={handleLikeButtonClick} alternative-text="Like"></lightning-button-icon-stateful>
+                        <lightning-button-icon-stateful icon-name="utility:answer" selected={answerState}
+                            onclick={handleAnswerButtonClick} alternative-text="Answer"
+                            class="slds-m-left_xx-small"></lightning-button-icon-stateful>
+                    </div>
+                </div>
+            </template>
+
+            <template lwc:if={displaySecond}>
+                <div class="slds-m-top_medium slds-m-bottom_x-large">
+                    <p class="slds-m-bottom_medium">
+                        Button-icon-statefuls with the <code>size</code> attribute set to a valid value
+                        (<code>xx-small, x-small, small, medium</code>).
+                    </p>
+
+                    <!-- Sizes -->
+                    <div class="slds-p-around_medium lgc-bg">
+                        <lightning-button-icon-stateful icon-name="utility:like" size="xx-small" selected={likeStateSize01}
+                            onclick={handleLikeButtonSizeClick} alternative-text="Like"
+                            data-button-number="01"></lightning-button-icon-stateful>
+                        <lightning-button-icon-stateful icon-name="utility:like" size="x-small" selected={likeStateSize02}
+                            onclick={handleLikeButtonSizeClick} alternative-text="Like" class="slds-m-left_xx-small"
+                            data-button-number="02"></lightning-button-icon-stateful>
+                        <lightning-button-icon-stateful icon-name="utility:like" size="small" selected={likeStateSize03}
+                            onclick={handleLikeButtonSizeClick} alternative-text="Like" class="slds-m-left_xx-small"
+                            data-button-number="03"></lightning-button-icon-stateful>
+                        <lightning-button-icon-stateful icon-name="utility:like" size="medium" selected={likeStateSize04}
+                            onclick={handleLikeButtonSizeClick} alternative-text="Like" class="slds-m-left_xx-small"
+                            data-button-number="04"></lightning-button-icon-stateful>
+                    </div>
+                </div>
+            </template>
+
+            <template lwc:if={displayThird}>
+                <div class="slds-m-top_medium slds-m-bottom_x-large">
+                    <p class="slds-m-bottom_medium">
+                        Button-icon-statefuls with the <code>disabled</code> attribute set.
+                    </p>
+
+                    <!-- Disabled -->
+                    <div class="slds-p-around_medium lgc-bg">
+                        <lightning-button-icon-stateful icon-name="utility:like" disabled selected={likeStateDisabled}
+                            onclick={handleLikeButtonDisabledClick} alternative-text="Like"></lightning-button-icon-stateful>
+                        <lightning-button-icon-stateful icon-name="utility:answer" disabled selected={answerStateDisabled}
+                            onclick={handleAnswerButtonDisabledClick} alternative-text="Answer"
+                            class="slds-m-left_xx-small"></lightning-button-icon-stateful>
+                    </div>
+                </div>
+            </template>    
+        </template>
+    </div>
+</template>
