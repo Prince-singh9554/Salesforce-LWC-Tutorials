@@ -1,0 +1,55 @@
+<template>
+
+    <br>
+    This is Child Component
+
+    <br><br>
+
+    <template for:each={displayProductDetails} for:item="product">
+
+        <!-- Product Items -->
+
+        <template for:each={product.items} for:item="data">
+
+            <div key={data.productId}>
+
+                Customer Name : {data.name}
+
+                <br>
+
+            </div>
+
+        </template>
+
+
+        <!-- Customer Details -->
+
+        <div key={product.orderId} class="slds-m-bottom_small">
+
+            Customer Email :
+            {product.customerEmail}
+
+            <br>
+
+            Customer Address :
+            {product.shippingAddress.street},
+            {product.shippingAddress.country}
+
+            <br><br>
+
+        </div>
+
+    </template>
+
+
+    <!-- Email received separately from Parent -->
+
+    <br>
+
+    <strong>
+        Email received using @api :
+    </strong>
+
+    {emailChange}
+
+</template>

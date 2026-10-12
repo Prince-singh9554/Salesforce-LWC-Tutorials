@@ -1,0 +1,15 @@
+<template>
+    <template lwc:if={hasProduct}>
+        <template for:each={productItem} for:item="eachitem">
+            <div key={eachitem.id}>
+                <c-child-component product-item={eachitem.name} product-id={eachitem.id} product-rating={eachitem.rating}></c-child-component>
+            </div>
+        </template>
+    </template>
+
+    <template lwc:if={parentCalled}>
+        <br><h2> that the parent called this message to show this! not has been called by the child component or other current component.</h2>
+    </template>
+    
+    
+</template>

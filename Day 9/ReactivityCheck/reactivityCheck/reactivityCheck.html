@@ -1,0 +1,20 @@
+<template>
+    <lightning-card class="slds-m-top_x-large" title="Reactivity Check">
+
+        <div class="slds-p-around_medium">
+
+            This is Parent Component
+            <br><br>
+
+            <lightning-button variant="success" label="Change Data" onclick={emailChange}>
+            </lightning-button>
+
+            <br><br>
+
+            <c-reactivity-within-child email-change={email2} my-product-details={myProductDetails}>
+            </c-reactivity-within-child>
+
+        </div>
+
+    </lightning-card>
+</template>

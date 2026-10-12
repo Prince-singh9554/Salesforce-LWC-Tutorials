@@ -1,0 +1,6 @@
+<template>
+    <lightning-card title="Pass data from Parent to Child">
+        <c-container-component product-found={productFound} product-item={productItem}></c-container-component>
+    </lightning-card>
+    <lightning-button variant="success" label="Continue" onclick={callChildMethod}></lightning-button>
+</template>
