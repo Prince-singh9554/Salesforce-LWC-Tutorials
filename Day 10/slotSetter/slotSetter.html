@@ -1,0 +1,20 @@
+<template>
+    <lightning-card title="Slot Setter" style="--slds-c-card-color-background: red; text-align: center;">
+
+        <c-slot-child-setter>
+            <div slot="header" class="slds-m-around_medium" style="background-color: white; color: rgb(111, 0, 255); text-align: left;">
+                Header
+            </div>
+            <div slot="body" class="slds-m-around_medium" style="background-color: rgb(93, 165, 66); color: rgb(223, 222, 224); text-align: center;">
+                Body
+            </div>
+            <div slot="footer" class="slds-m-around_medium" style="background-color: white; color: rgb(111, 0, 255); text-align: right;">
+                Footer
+            </div>
+
+
+            This is a default slot and has not been picked up by anyone of the name slots.
+        </c-slot-child-setter>
+
+    </lightning-card>
+</template>
