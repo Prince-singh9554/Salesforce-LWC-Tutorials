@@ -1,0 +1,11 @@
+<template>
+    <lightning-card class="slds-m-around_medium" title="Child Component">
+        <lightning-button class="slds-m-around_medium" label="Show Product" variant="success" onclick={handleFiringEvent}></lightning-button>
+        <template lwc:if={isClicked}>
+            <div class="slds-m-around_medium">
+                <br>{selectedProduct.id} ===> {selectedProduct.name}
+            </div>
+        </template>
+    </lightning-card>
+
+</template>

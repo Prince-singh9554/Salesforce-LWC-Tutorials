@@ -1,0 +1,12 @@
+<template>
+    <lightning-card title="Parent Component">
+        <template lwc:if={isClicked}>
+            <p class="slds-m-around_medium">
+                The product name is {selectedProducts.name}<br>
+                The product delivered to {selectedBy}<br>
+                The product is delivered on {timeStamp}<br>
+            </p>
+        </template>
+        <c-child-event-trigger onsendproductselected={handleproductselecttion}></c-child-event-trigger>
+    </lightning-card>
+</template>
