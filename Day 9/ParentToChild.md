@@ -178,6 +178,7 @@ Message from Parent: Hello from Parent Component!
 - Data flow should generally remain one-way: the child should not directly modify a parent-owned value. For communication back to the parent, use custom events.
 - The child component must be included in the parent template and be available in the Salesforce project.
 
+
 ## Common Mistakes
 
 - Forgetting to import `api` from `lwc`.
