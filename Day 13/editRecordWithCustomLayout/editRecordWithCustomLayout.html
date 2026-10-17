@@ -1,0 +1,38 @@
+<template>
+    <lightning-card title="Record form with custom layout to edit">
+        <lightning-record-edit-form record-id={recordId} object-api-name={objectName} onsuccess={handleSuccess}>
+
+            <lightning-messages></lightning-messages>
+
+            <div class="slds-grid slds-wrap slds-m-around_medium">
+                <div class="slds-size_2-of-2">
+                    <lightning-input-field field-name="CaseNumber"></lightning-input-field>
+                </div>
+                <div class="slds-size_1-of-2">
+                    <lightning-input-field field-name="Origin"></lightning-input-field>
+                </div>
+                <div class="slds-size_1-of-2">
+                    <lightning-input-field field-name="Reason"></lightning-input-field>
+                </div>
+                <div class="slds-size_1-of-2">
+                    <lightning-input-field field-name="Status"></lightning-input-field>
+                </div>
+                <div class="slds-size_1-of-2">
+                    <lightning-input-field field-name="Subject"></lightning-input-field>
+                </div>
+                <div class="slds-size_1-of-2">
+                    <lightning-input-field field-name="Type"></lightning-input-field>
+                </div>
+                <div class="slds-size_1-of-2">
+                    <lightning-input-field field-name="SLAViolation__c"></lightning-input-field>
+                </div>
+
+                <div class="slds-m-around_medium">
+                    <lightning-button class="slds-p-left_small" label="Reset" type="reset" variant="brand"></lightning-button>
+                    <lightning-button class="slds-p-left_small" label="Save" type="submit" variant="brand"></lightning-button>
+                </div>
+            </div>
+
+        </lightning-record-edit-form>
+    </lightning-card>
+</template>
